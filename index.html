@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mostafa Mohamed">
+    <title>Bookmark</title>
+    <meta name="description" content="A place where you can save all your favorite sites">
+
+    <!-- fontstyle -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="imgs/bookmark.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+    <section class="home">
+        <div class="container">
+            <div class="test py-5 m-auto">
+                <h1 class="title m-auto text-center">Bookmarker</h1>
+            </div>
+            
+
+            <div class=" borders">
+                <h2 class="my-5 text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i></h2>
+
+                <form action="" class="my-3 py-3">
+                    <label class="mb-1 fw-semibold" for="inputName"><i class="fa-solid fa-book-bookmark"></i> Site
+                        Name</label>
+                    <input type="text" class="w-100 mb-4 form-control bg-dark-subtle" placeholder="Bookmark Name" id="inputName">
+
+                    <label class="mb-1 fw-semibold" for="inputURL"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input type="text" class="w-100 mb-4 form-control bg-dark-subtle" placeholder="Website URL" id="inputURL">
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-submit" type="button" id="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- search bar -->
+            <div class="py-4">
+                <div class="row">
+                    <div class="col-xxl-3 col-xl-4 col-lg-5">
+                        <label for="searchBar" class="searchLabel mb-4 mx-auto">Search for website here . . . <i
+                                class="fa-solid fa-arrow-right-"></i></label>
+                    </div>
+                    <div class="col-xxl-9 col-xl-8 col-lg-7">
+                        <input type="text" placeholder="website name" id="searchBar"
+                            class="w-100 form-control mb-4 mx-auto bg-dark-subtle" oninput="search(this.value)">
+                    </div>
+                </div>
+            </div>
+
+            <!-- table -->
+            <div class="table-responsive">
+                <table class="table table-striped table-dark text-center">
+                    <thead class="table-col">
+                        <tr class="fw-semibold">
+                            <th scope="col">Index</th>
+                            <th scope="col">Website Name</th>
+                            <th scope="col">Visit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableRow">
+    
+                    </tbody>
+                </table>
+            </div>
+            
+
+
+            <!-- alert window -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                id="modalButton">
+                Launch demo modal
+            </button>
+
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header">
+                            <!-- <h2 class="modal-title fs-5" id="exampleModalLabel">Watch out!</h2> -->
+                            <div class="d-flex">
+                                <span class="rounded-circle me-2 bg-danger"></span>
+                                <span class="rounded-circle me-2 bg-warning"></span>
+                                <span class="rounded-circle me-2 bg-success"></span>
+                            </div>
+                            <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <p class="fw-bold">Site Name or Url is not valid, Please follow the rules below :</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark"><i class="fa-regular fa-circle-right pe-3"></i>Site name
+                                        must contain
+                                        at least 3 characters</li>
+                                    <li class="list-group-item bg-dark"><i class="fa-regular fa-circle-right pe-3"></i>Site URL
+                                        must be a
+                                        valid one</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

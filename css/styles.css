@@ -1,0 +1,104 @@
+::selection {
+    background-color: rgba(254, 194, 96, 0.8);
+}
+
+body {
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container{
+    padding-bottom: 1rem;
+}
+.home {
+    min-height: 100vh;
+    background-image: url(../imgs/background.png);
+    background-size: cover;
+}
+
+.test {
+    height: fit-content;
+    width: fit-content;
+}
+
+.home h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    position: relative;
+    z-index: 3;
+}
+
+.home h1::after {
+    content: '';
+    position: absolute;
+    background-color: #FEC260;
+    width: 265px;
+    height: 20px;
+    bottom: 0;
+    transform: translate(-100%);
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+}
+
+.home h1:hover:after {
+    height: 40px;
+}
+
+.home h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #000000,#858585 );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home input:focus {
+    box-shadow: 0 0 0 0.07rem #352E28;
+    outline: 0;
+}
+
+.searchLabel {
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    font-size: 25px;
+}
+
+.btn-submit {
+    padding: 6px 48px;
+    --bs-btn-bg: #352e28;
+    --bs-btn-border-color: #352e28;
+    --bs-btn-hover-bg: #221f1b;
+    --bs-btn-hover-border-color: #221f1b;
+}
+
+.btn-submit:first-child:active {
+    color: black;
+    background-color: transparent;
+    border-color: black;
+}
+
+.borders {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+.modal-header span {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.modal-body, .modal-body li{
+    color: whitesmoke;
+}
+.modal-body i {
+    color: red;
+}
+.table{
+    margin-bottom: 0rem;
+}
