@@ -11,7 +11,7 @@ if (localStorage.getItem('websites') != null)
 
 display(websiteLists)
 btn.onclick = function (e) {
-    // e.preventDefault();
+    e.preventDefault();
     submit();
 }
 
